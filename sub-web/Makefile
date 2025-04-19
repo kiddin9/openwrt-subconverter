@@ -30,11 +30,9 @@ define Package/sub-web/description
 endef
 
 define Build/Compile
-	( \
-		pushd "$(PKG_BUILD_DIR)"; \
-		npm install && \
-		npm run build
-	)
+	pushd "$(PKG_BUILD_DIR)"; \
+	npm install && \
+	npm run build
 endef
 
 define Package/sub-web/install
